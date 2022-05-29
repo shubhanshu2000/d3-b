@@ -18,6 +18,7 @@ mongoose.connect(
 app.get("/", async (req, res) => {
   let rdata = await Data.find();
   res.send(rdata);
+  res.json("server start");
 });
 
 app.listen(port, () => {
